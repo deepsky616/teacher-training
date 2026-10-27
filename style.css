@@ -67,3 +67,6 @@ dialog dt{color:var(--muted)}dialog dd{margin:0}
 .badge.open{background:var(--s3)}.badge.closed{background:var(--s4)}.badge.soon{background:var(--s0)}
 .dlgbtns{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:8px}
 .dlgbtns .apply,.dlgbtns .close{margin-top:0}
+.controls .chk input{flex:none;padding:0;width:18px;height:18px;accent-color:var(--accent)}
+.chk{white-space:nowrap}
+main.wrap{padding-top:20px}
