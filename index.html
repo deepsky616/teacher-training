@@ -3,40 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>연수 관리 홈페이지</title>
+<title>연수 안내 및 신청</title>
+<meta name="description" content="신청할 수 있는 연수를 확인하고 바로 신청하세요.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
-    <h1>📚 연수 관리 홈페이지</h1>
-    <p class="sub">신청할 연수, 듣고 있는 연수, 이수한 연수를 한곳에서 확인해요.</p>
+    <h1>📚 연수 안내 및 신청</h1>
+    <p class="sub">지금 신청할 수 있는 연수를 확인하고 <b>신청하기</b> 버튼으로 바로 신청하세요.</p>
     <p class="updated">마지막 업데이트: <span id="lastUpdated">-</span></p>
   </div>
 </header>
 
 <main class="wrap">
-  <section id="summary" class="summary"></section>
-
-  <section class="panel">
-    <h2>⏰ 다가오는 신청 마감</h2>
+  <section class="panel" id="deadlinePanel" hidden>
+    <h2>⏰ 신청 마감이 다가와요</h2>
     <ul id="deadlines" class="deadlines"></ul>
   </section>
 
   <section class="panel">
     <div class="controls">
-      <input id="search" type="search" placeholder="연수 이름, 주관, 메모로 검색">
-      <select id="fStatus"><option value="">상태 전체</option></select>
-      <select id="fMode"><option value="">방식 전체</option></select>
+      <input id="search" type="search" placeholder="연수 이름, 주관 기관, 대상으로 검색">
       <select id="fCategory"><option value="">분야 전체</option></select>
-      <select id="sort">
-        <option value="start_asc">시작일 빠른 순</option>
-        <option value="start_desc">시작일 늦은 순</option>
-        <option value="deadline_asc">마감일 빠른 순</option>
-      </select>
+      <label class="chk"><input type="checkbox" id="showClosed"> 마감된 연수도 보기</label>
       <div class="viewtoggle">
-        <button data-view="card" class="active">카드</button>
-        <button data-view="table">표</button>
+        <button data-view="card" class="active">목록</button>
         <button data-view="calendar">달력</button>
       </div>
     </div>
@@ -46,10 +38,10 @@
 
 <dialog id="detail">
   <div id="detailBody"></div>
-  <form method="dialog"><button class="close">닫기</button></form>
+  <div class="dlgbtns"><span id="detailApply"></span><form method="dialog"><button class="close">닫기</button></form></div>
 </dialog>
 
-<footer class="wrap foot">연수 정보는 <code>data/trainings.json</code> 한 파일로 관리돼요.</footer>
+<footer class="wrap foot">신청 관련 문의는 각 연수의 주관 기관으로 해 주세요.</footer>
 <script src="app.js"></script>
 </body>
 </html>

@@ -56,3 +56,14 @@ dialog dt{color:var(--muted)}dialog dd{margin:0}
 .close{margin-top:8px;border:0;background:var(--accent);color:#fff;padding:9px 18px;border-radius:10px;font:inherit;cursor:pointer}
 .foot{color:var(--muted);font-size:.85rem;padding:20px 16px 40px;text-align:center}
 @media (max-width:600px){.hero h1{font-size:1.4rem}.cal .day{min-height:52px;font-size:.68rem}}
+.chk{display:flex;align-items:center;gap:6px;font-size:.9rem;color:var(--muted);padding:0 4px}
+.desc{font-size:.9rem;margin:6px 0 4px}
+.card{display:flex;flex-direction:column}
+.card .spacer{flex:1}
+.apply{display:inline-block;margin-top:10px;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:10px;border:0;font:inherit;font-weight:700}
+.apply:hover{filter:brightness(.95)}
+.apply.off{background:#e6ddd0;color:#7d705f;cursor:default}
+.card.closed{opacity:.7}
+.badge.open{background:var(--s3)}.badge.closed{background:var(--s4)}.badge.soon{background:var(--s0)}
+.dlgbtns{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:8px}
+.dlgbtns .apply,.dlgbtns .close{margin-top:0}
